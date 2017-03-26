@@ -1,0 +1,59 @@
+\chapter{Requisitos}
+\section{Escenarios de caso de uso}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|lp{0.8\textwidth}|}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{CU-01}   & \textbf{Nombre de escenario} \\ \hline
+		Participantes    &                              \\ \hline
+		Flujo de eventos &                              \\ \hline
+		Importancia      &                              \\ \hline
+		Versión          &                              \\ \hline
+	\end{tabular}
+	\caption{CU-01: Ejemplo}
+\end{table}
+
+\begin{table}[H]
+	\centering
+	\begin{tabular}{|lp{0.8\textwidth}|}
+		\hline
+		\rowcolor[HTML]{C0C0C0} 
+		\textbf{CU-02}   & \textbf{MuerteJugador} \\ \hline
+		Participantes    & \begin{itemize} 
+								\item \textbf{Jugador: PlayerEntity}
+								\item \textbf{Daño: DamageEntity}
+								\item \textbf{Salud: PlayerHP}
+								\item \textbf{Escudo: PlayerShield}
+							\end{itemize}               \\ \hline
+		Flujo de eventos &  \begin{enumerate}
+								\item \textbf{Jugador} colisiona con \textbf{DamageEntity}
+								\item Valor de \textbf{Escudo} se reduce de acuerdo al valor de \textbf{DamageEntity}
+								\item Valor de \textbf{PlayerHP} se reduce de acuerdo al valor de \textbf{DamageEntity} y \textbf{Shield}.
+								\begin{enumerate}
+									\item \textbf{PlayerHP} está por encima de 0, continuar con normalidad.
+									\item \textbf{PlayerHP} está por debajo de 0 o es igual, \textbf{Jugador} muere.
+									\begin{enumerate}
+										\item \textbf{Jugador} desaparece.
+										\item Aparece una animación de explosión en la posición del \textbf{Jugador}.
+										\item Al finalizar el juego, se le pide al \textbf{Jugador} si quiere volver a jugar o quiere volver al menú principal.
+									\end{enumerate}
+								\end{enumerate}
+							\end{enumerate}                            \\ \hline
+		Importancia      &  Alta                            \\ \hline
+		Versión          &  1.0.0                            \\ \hline
+	\end{tabular}
+	\caption{CU-02: MuerteJugador}
+\end{table}
+\section{Diagramas de secuencia}
+\begin{center}
+	\fbox{\begin{minipage}{32em}
+			\textit{Para cada escenario anterior, poner aquí un diagrama de secuencia.}
+	\end{minipage}}
+\end{center}
+\section{Diagrama de clases}
+\begin{center}
+	\fbox{\begin{minipage}{32em}
+			\textit{Poner aquí el diagrama de clases de todo el juego donde se pueda ver las relaciones entre ellas. Explicar brevemente el diagrama.}
+	\end{minipage}}
+\end{center}

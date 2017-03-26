@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[spanish, es-tabla,es-nodecimaldot,es-lcroman,es-noindentfirst]{babel}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{lipsum}
+\usepackage[export]{adjustbox}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{hhline}
+\setlength\headheight{26pt} 
+\rhead{  \includegraphics[width=1cm]{./images/logo_empresa.png}}
+\usepackage{float}
+
+\begin{document}
+\begin{titlepage}
+	
+	\begin{center}
+		\vspace*{-2in}
+		\begin{figure}[htb]
+			\includegraphics[width=2cm,right]{./images/logo_empresa.png}
+		\end{figure}
+	
+		\vspace*{0.5in}
+		\begin{figure}[htb]
+			\begin{center}
+				\includegraphics[width=15cm]{./images/cover_juego.png}
+			\end{center}
+		\end{figure}
+		
+		\vspace*{0.65in}
+
+		\begin{large}
+			DOCUMENTO DE DISEÑO\\
+		\end{large}
+		\vspace*{0.2in}
+		\begin{Large}
+			\textbf{Nombre del juego} \\ 
+		\end{Large}
+		\vspace*{1in}
+
+		\rule{80mm}{0.1mm}\\
+		\vspace*{0.3in}
+	\end{center}
+	\begin{large}
+		\begin{minipage}{10cm}			
+			\textsc{Fecha}
+	
+			\today \\
+		\end{minipage}
+		\hfill
+		\begin{minipage}{10cm}
+			\textsc{Autor}
+				
+			Iván Martínez Mateu \\
+		\end{minipage}
+	\end{large}
+	\vspace*{0.3in}
+	\begin{center}
+		Versión \# 1.00
+		All work Copyright ©2017 por \textbf{Nombre de empresa} 
+	\end{center}
+	
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\listoffigures
+\listoftables
+
+\mainmatter
+\include{./chapters/01_control_versiones}
+\include{./chapters/02_descripcion_juego}
+\include{./chapters/03_mecanicas_juego}
+\include{./chapters/04_interfaz_usuario}
+\include{./chapters/05_arte_video}
+\include{./chapters/06_sonido_musica}
+\include{./chapters/07_diseno_niveles}
+\include{./chapters/08_requisitos}
+\include{./chapters/09_implementacion}
+\include{./chapters/10_testing}
+\include{./chapters/11_monetizacion}
+\include{./chapters/12_marketing}
+\include{./chapters/13_gestion}
+\include{./chapters/14_glosario}
+\include{./chapters/15_referencias}
+\include{./chapters/16_anexos}
+\backmatter
+
+
+\end{document}
